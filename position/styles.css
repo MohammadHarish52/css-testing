@@ -1,0 +1,41 @@
+
+body{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin:0;
+    height:100vh;
+}
+
+
+
+.parent1,.parent2{
+height:300px;
+width:300px;
+}
+
+.child1,.child2{
+    height:100px;
+    width:100px;
+}
+.parent1{
+    background-color: black;
+   
+}
+.child1{
+    background-color: aqua;
+    /*in case of position relative it is directly in accordence to its ancestor*/
+    position:relative;
+    /* if the parent div is not positioned relative then the given div is positioned according to the main body ancestor */
+    left:10%;
+}
+.parent2{
+    position: relative;
+    background-color:blue;
+}
+.child2{
+    /* if we want to position the current div according to the parent div we have to position relative the div wrapping this div */
+    position:absolute;
+    left:0;
+    background-color: yellow;
+}
